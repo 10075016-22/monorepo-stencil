@@ -1,0 +1,23 @@
+{
+    "name": "@stencil-nx-project/shared-ui-angular",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "Angular wrapper for UI Components",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc -p tsconfig.lib.json && node copy-files.js"
+    },
+    "peerDependencies": {
+        "@angular/core": ">=18.0.0",
+        "@angular/common": ">=18.0.0",
+        "@angular/forms": ">=18.0.0"
+    },
+    "dependencies": {
+        "@stencil-nx-project/shared-ui": "0.0.1"
+    },
+    "devDependencies": {
+        "@stencil/angular-output-target": "^0.9.0",
+        "typescript": "~5.2.0"
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "name": "@stencil-nx-project/shared-ui",
+    "version": "0.0.1",
+    "description": "Stencil Component Library",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.js",
+    "es2015": "dist/esm/index.js",
+    "es2017": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
+    "collection": "dist/collection/collection-manifest.json",
+    "collection:main": "dist/collection/index.js",
+    "unpkg": "dist/shared-ui/shared-ui.esm.js",
+    "files": [
+        "dist/",
+        "loader/"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/types/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs.js"
+        },
+        "./loader": {
+            "types": "./loader/index.d.ts",
+            "import": "./loader/index.js",
+            "require": "./loader/index.cjs.js"
+        },
+        "./components": {
+            "types": "./dist/types/components.d.ts"
+        },
+        "./components/*.js": "./dist/components/*.js",
+        "./components/*": "./dist/components/*.js",
+        "./dist/*": "./dist/*"
+    },
+    "scripts": {
+        "build": "stencil build",
+        "start": "stencil build --dev --watch --serve",
+        "test": "stencil test --spec",
+        "test.watch": "stencil test --spec --watchAll",
+        "generate": "stencil generate"
+    },
+    "devDependencies": {
+        "@stencil/core": "^4.22.2"
+    },
+    "license": "MIT"
+}

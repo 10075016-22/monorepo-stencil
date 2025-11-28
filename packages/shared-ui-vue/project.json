@@ -1,0 +1,24 @@
+{
+    "name": "shared-ui-vue",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/shared-ui-vue/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "nx:run-commands",
+            "outputs": [
+                "{projectRoot}/dist"
+            ],
+            "options": {
+                "cwd": "packages/shared-ui-vue",
+                "commands": [
+                    "tsc -p tsconfig.lib.json"
+                ]
+            }
+        }
+    },
+    "tags": [
+        "type:wrapper",
+        "platform:vue"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "name": "@stencil-nx-project/shared-ui-vue",
+    "version": "0.0.1",
+    "description": "Vue wrapper for UI Components",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc -p tsconfig.lib.json"
+    },
+    "peerDependencies": {
+        "vue": ">=3.0.0"
+    },
+    "dependencies": {
+        "@stencil-nx-project/shared-ui": "0.0.1"
+    },
+    "devDependencies": {
+        "@stencil/vue-output-target": "^0.8.0",
+        "typescript": "~5.2.0",
+        "vue": "^3.0.0"
+    }
+}
