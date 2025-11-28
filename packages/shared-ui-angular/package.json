@@ -5,6 +5,18 @@
     "description": "Angular wrapper for UI Components",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.js"
+        },
+        "./module": {
+            "types": "./dist/lib/module.d.ts",
+            "import": "./dist/lib/module.js",
+            "require": "./dist/lib/module.js"
+        }
+    },
     "scripts": {
         "build": "tsc -p tsconfig.lib.json && node copy-files.js"
     },

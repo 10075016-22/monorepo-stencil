@@ -2,8 +2,13 @@
   "name": "@stencil-nx-project/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
-  "private": true,
+  "scripts": {
+    "registry:start": "verdaccio",
+    "registry:set": "npm set registry http://localhost:4873/",
+    "registry:reset": "npm set registry https://registry.npmjs.org/",
+    "publish:local": "bash scripts/publish-local.sh"
+  },
+  "private": false,
   "devDependencies": {
     "@nx/js": "22.1.3",
     "@nxext/stencil": "^21.0.0",
@@ -29,7 +34,8 @@
     "react-dom": "^18.2.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "vue": "^3.3.0"
+    "vue": "^3.3.0",
+    "verdaccio": "^5.31.0"
   },
   "workspaces": [
     "packages/*"
